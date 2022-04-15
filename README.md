@@ -1,6 +1,7 @@
 # Start pack sa2 assignment
 
 *description*
+- i had extension from professor because of covid
 
 [deployed url](https://test-starter-deploy.onrender.com)
 
