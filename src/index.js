@@ -15,7 +15,7 @@ function App(props) {
           <Route path="/about" element={<About />} />
           <Route path="/test/:id" element={<Test />} />
           <Route path="*" element={<FallBack />} />
-        </Routes>`
+        </Routes>
       </div>
     </Router>
   );

@@ -63,10 +63,7 @@ module.exports = {
         },
       },
     ],
-    devServer: {
-      hot: true,
-      historyApiFallback: true,
-    },
+
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -80,5 +77,7 @@ module.exports = {
   ],
   devServer: {
     hot: true,
+    historyApiFallback: true,
   },
+
 };
