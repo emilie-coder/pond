@@ -5,7 +5,15 @@ import {
   BrowserRouter as Router, Route, NavLink, Routes, useParams,
 } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+
+import rootReducer from './reducers';
+import Counter from './components/counter';
+import Controls from './components/control';
+
 function App(props) {
+  // this creates the store with the reducers
   return (
     <Router>
       <div>
@@ -43,12 +51,27 @@ function About(props) {
   return <div> All there is to know about me </div>;
 }
 function Welcome(props) {
-  return <div>Welcome</div>;
+  return (
+    <div>
+      Welcome
+      <Counter />
+      <Controls />
+    </div>
+  );
 }
 
 function FallBack(props) {
   return <div>URL Not Found</div>;
 }
 
+// this creates the store with the reducers
+const store = configureStore({
+  reducer: rootReducer,
+});
+
 const root = createRoot(document.getElementById('main'));
-root.render(<App />);
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+);
