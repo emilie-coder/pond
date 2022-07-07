@@ -19,28 +19,29 @@ function App(props) {
   // this creates the store with the reducers
   return (
     <Router>
-      <div>
+      <div className="navBar">
         <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/manifesto" element={<Manifesto />} />
-          <Route path="*" element={<FallBack />} />
-        </Routes>
+        <img src="./graphics/logo.png" alt="logo" />
       </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/manifesto" element={<Manifesto />} />
+        <Route path="*" element={<FallBack />} />
+      </Routes>
     </Router>
   );
 }
 
 function Nav(props) {
   return (
-    <nav>
-      <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/aboutUs">About Us</NavLink></li>
-        <li><NavLink to="/FAQ">FAQ</NavLink></li>
-        <li><NavLink to="/manifesto">Manifesto</NavLink></li>
+    <nav className="navigation">
+      <ul className="navElements">
+        <li className="navElem"><NavLink to="/">Home</NavLink></li>
+        <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+        <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+        <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
       </ul>
     </nav>
   );

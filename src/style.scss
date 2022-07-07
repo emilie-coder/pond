@@ -1,20 +1,39 @@
+//____________________________________________ STYLE SHEET ___________________________________________
+
+//____________________________________________ GENERAL ______________________________________________
+
+//____________________________________________ Variables ______________________________________________
+:root{
+  --dark-green: 5, 32, 16;
+  --light-green: 37, 67, 67;
+  --grey: 104, 121, 123;
+  --light-grey: 182, 195, 199;
+  --white: 211, 223, 225;
+}
+
+//____________________________________________ Main ______________________________________________
 body, html {
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #2996ba 0%,#53cbf1 40%,#f9f9f9 100%);
-    height: 100%;
-  }
-  
-.logo {
-background-image: url('img/MYIMAGE.jpg');
-width: 100px;
-height: 100px;
-background-repeat: no-repeat;
-background-size: contain;
-}
-
-.active {
-  color: pink;
+  background: linear-gradient(to bottom, rgba(var(--dark-green)) 0%,rgba(var(--grey)) 60%, rgba(var(--light-grey)) 100%);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 
+.main {
+  display: flex;
+  flex-direction: column;
+}
+//____________________________________________ Navigation ______________________________________________
+.navigation {
+  display: flex;
+  width: 100%;
+}
 
+.navigation .navElements{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
