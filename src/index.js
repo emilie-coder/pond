@@ -2,15 +2,18 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.scss';
 import {
-  BrowserRouter as Router, Route, NavLink, Routes, useParams,
+  BrowserRouter as Router, Route, NavLink, Routes,
 } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 
 import rootReducer from './reducers';
-import Counter from './components/counter';
-import Controls from './components/control';
+
+import AboutUs from './components/aboutUs';
+import FAQ from './components/faq';
+import Home from './components/home';
+import Manifesto from './components/manifesto';
 
 function App(props) {
   // this creates the store with the reducers
@@ -19,9 +22,10 @@ function App(props) {
       <div>
         <Nav />
         <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/test/:id" element={<Test />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/manifesto" element={<Manifesto />} />
           <Route path="*" element={<FallBack />} />
         </Routes>
       </div>
@@ -34,29 +38,11 @@ function Nav(props) {
     <nav>
       <ul>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
+        <li><NavLink to="/aboutUs">About Us</NavLink></li>
+        <li><NavLink to="/FAQ">FAQ</NavLink></li>
+        <li><NavLink to="/manifesto">Manifesto</NavLink></li>
       </ul>
     </nav>
-  );
-}
-
-function Test(props) {
-  const { id } = useParams();
-  return <div> ID: {id} </div>;
-}
-
-function About(props) {
-  return <div> All there is to know about me </div>;
-}
-function Welcome(props) {
-  return (
-    <div>
-      Welcome
-      <Counter />
-      <Controls />
-    </div>
   );
 }
 
