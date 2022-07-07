@@ -21,7 +21,7 @@ function App(props) {
     <Router>
       <div className="navBar">
         <Nav />
-        <img src="./graphics/logo.png" alt="logo" />
+        <div className="navLogo" />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
