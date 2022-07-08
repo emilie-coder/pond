@@ -21,6 +21,7 @@ function App(props) {
     <Router>
       <div className="navBar">
         <Nav />
+        <h1 className="navBar_title">pond</h1>
         <div className="navLogo" />
       </div>
       <Routes>

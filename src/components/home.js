@@ -5,15 +5,17 @@ function Home(props) {
     <div className="hp_main">
       <div className="hp_sub">
         <h2 className="hp_subTitle"> Innovative Solutions</h2>
-        <h3 className="hp_subText"> for new and upcoming artists</h3>
+        <h3 className="hp_subText"> for musicians to thrive</h3>
       </div>
       <div className="hp_sub">
         <h2 className="hp_subTitle"> We Help musicians</h2>
+        <h2 className="hp_subTitle"> focus on their craft </h2>
       </div>
       <div className="hp_sub">
-        <h2 className="hp_subTitle"> Do what they love</h2>
-        <h3 className="hp_subText"> allowing them to continue their craft</h3>
-        <h3 className="hp_subText"> while we</h3>
+        <h2 className="hp_subTitle"> while we build </h2>
+        <h3 className="hp_subText"> careers </h3>
+        <h3 className="hp_subText"> community </h3>
+        <h3 className="hp_subText"> capital </h3>
       </div>
       <div className="hp_sub">
         <h2 className="hp_subTitle"> How we do it</h2>
