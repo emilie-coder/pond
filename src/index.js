@@ -14,6 +14,7 @@ import AboutUs from './components/aboutUs';
 import FAQ from './components/faq';
 import Home from './components/home';
 import Manifesto from './components/manifesto';
+import Contact from './components/contact';
 
 function App(props) {
   // this creates the store with the reducers
@@ -29,6 +30,7 @@ function App(props) {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/manifesto" element={<Manifesto />} />
+        <Route path="/contactUs" element={<Contact />} />
         <Route path="*" element={<FallBack />} />
       </Routes>
     </Router>
@@ -40,9 +42,10 @@ function Nav(props) {
     <nav className="navigation">
       <ul className="navElements">
         <li className="navElem"><NavLink to="/">Home</NavLink></li>
-        <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
-        <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
         <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
+        <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+        <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+        <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
       </ul>
     </nav>
   );
