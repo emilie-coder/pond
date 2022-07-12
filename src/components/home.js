@@ -29,7 +29,7 @@ class Home extends Component {
   render() {
     return (
       <div className="homePage">
-        <div className="hP_title">
+        <div className="hp_title">
           <div className="hp_logo" />
           <h1 className="titleFont">POND</h1>
           <p className="subtitle">let your music thrive in endess Web3 possibilities</p>

@@ -42,9 +42,13 @@ function Nav(props) {
     <nav className="navigation">
       <ul className="navElements">
         <li className="navElem"><NavLink to="/">Home</NavLink></li>
+        <li className="nav_seperator">/</li>
         <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
+        <li className="nav_seperator">/</li>
         <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+        <li className="nav_seperator">/</li>
         <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+        <li className="nav_seperator">/</li>
         <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
       </ul>
     </nav>
