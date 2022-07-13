@@ -4,6 +4,7 @@
 
 //____________________________________________ Variables ______________________________________________
 :root{
+  // main forward colors
   --main: 176, 108, 152;
   --dark-main: 88, 8, 60;
   --secondary: 37, 67, 67;
@@ -11,6 +12,14 @@
   --light-grey: 182, 195, 199;
   --white: 250, 250, 250;
   --black: 0, 0, 0;
+
+  //background gradient colors
+  --grey-blue: #7695C6;
+  --light-purple: #C8CFFF;
+  --vivid-purple: #AAA6FD;
+  --light-blue: #E0EEFE;
+  --orange-yellow: #F8E8D6;
+
 }
 
 //____________________________________________ Main ______________________________________________
@@ -35,9 +44,9 @@ body, html {
   flex-direction: row-reverse;
   align-items: center;
   width: 100%;
-  height: 10%;
-  background-color: rgba(var(--black));
-  color: rgba(var(--white));
+  background-color: rgba(var(--white));
+  color: rgba(var(--black));
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .navigation {
@@ -52,20 +61,27 @@ body, html {
   justify-content: space-around;
   list-style: none;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navElem a{
   text-decoration: none;
-  color: rgba(var(--white))
+  color: rgba(var(--black))
 }
 
 .navLogo{
   display: flex;
   width: 25%;
-  height: 50px;
+  height: 10px;
   background-image: url('./graphics/LOGO.svg');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.navBar h1{
+  display: flex;
+  font-size: small;
 }
 
 //===============================================================================================
@@ -76,6 +92,7 @@ body, html {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: var(--white);
 }
 
 //------------------------------ title ------------------------------------
@@ -88,7 +105,7 @@ body, html {
 
 .hp_logo{
   width: 200px;
-  height: 100px;
+  // height: 100px;
   background-image: url('./graphics/LOGO.svg');
   background-repeat: no-repeat;
 }

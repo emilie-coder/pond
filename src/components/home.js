@@ -37,7 +37,7 @@ class Home extends Component {
         <div className="section1">
           <div className="s1_sub">
             <div className="s1_sub_a">
-              <h2 className="s1_title">Nft is transforming the music industry</h2>
+              <h2 className="s1_title">NFTs are transforming the music industry</h2>
             </div>
             <div className="s1_sub_b">
               <h2 className="s1_title">but many problems still exist...</h2>
