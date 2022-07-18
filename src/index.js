@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.scss';
 import {
@@ -8,6 +10,7 @@ import {
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 
+import Menu from 'react-burger-menu/lib/menus/slide';
 import rootReducer from './reducers';
 
 import AboutUs from './components/aboutUs';
@@ -15,15 +18,14 @@ import FAQ from './components/faq';
 import Home from './components/home';
 import Manifesto from './components/manifesto';
 import Contact from './components/contact';
+import Navigation from './components/navigation';
 
 function App(props) {
   // this creates the store with the reducers
   return (
     <Router>
-      <div className="navBar">
-        <Nav />
-        <h1 className="navBar_title">pond</h1>
-        <div className="navLogo" />
+      <div id="outer-container">
+        <Navigation />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,17 +42,15 @@ function App(props) {
 function Nav(props) {
   return (
     <nav className="navigation">
-      <ul className="navElements">
-        <li className="navElem"><NavLink to="/">Home</NavLink></li>
-        <li className="nav_seperator">/</li>
-        <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
-        <li className="nav_seperator">/</li>
-        <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
-        <li className="nav_seperator">/</li>
-        <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
-        <li className="nav_seperator">/</li>
-        <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
-      </ul>
+      <Menu pageWrapId="page-wrap" outerContainerId="outer-container">
+        <ul className="navElements">
+          <li className="navElem"><NavLink to="/">Home</NavLink></li>
+          <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
+          <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+          <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+          <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
+        </ul>
+      </Menu>
     </nav>
   );
 }
