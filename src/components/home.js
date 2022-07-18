@@ -30,7 +30,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="homePage">
+      <div className="homePage" id="page-wrap">
         homepage
       </div>
     );
