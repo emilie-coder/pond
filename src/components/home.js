@@ -99,6 +99,7 @@ class Home extends Component {
           <h1 className="section3_title">
             But.. NFT is confusing..
           </h1>
+          <img className="vinylRecord" alt="img" src={require('../Images/brett-jordan-P_LEitbpCPg-unsplash.png')} />
           <div className="section3_subsections">
             <div className="section3_subsection">
               <h2 className="section3_noteTitle">How do I make an NFT?</h2>
@@ -118,57 +119,67 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="section4">
-          <div className="section4_lineHeader" />
-          <h1 className="section4_title">
-            How we do it
-          </h1>
-          <Carousel
-            showThumbs={false}
-            infiniteLoop
-            emulateTouch
-          >
-            <div className="slide" id="slide1">
-              <h2 className="slide_title">Individualized Meetings</h2>
-              <p className="slide_text">We will get to know you, listen to your stories, and communicate with you about your demand…</p>
+        <div className="bottom_animation">
+          <div className="section4">
+            <div className="section4_lineHeader" />
+            <h1 className="section4_title">
+              How we do it
+            </h1>
+            <div className="myCar">
+              <Carousel
+                showThumbs={false}
+                infiniteLoop
+                emulateTouch
+                autoPlay
+                interval="9000"
+                transitionTime="500"
+                swipeable
+                stopOnHover
+                ariaLabel="string"
+              >
+                <div className="my_slide" id="slide1">
+                  <h2 className="slide_title">Individualized Meetings</h2>
+                  <p className="slide_text">We will get to know you, listen to your stories, and communicate with you about your demand…</p>
+                </div>
+                <div className="my_slide" id="slide2">
+                  <h2 className="slide_title">Community Analysis</h2>
+                  <p className="slide_text">We take a closer look at your music, analyze your audience’s preferences, and find connection between your fan community and the native Web3 consumers</p>
+                </div>
+                <div className="my_slide" id="slide3">
+                  <h2 className="slide_title">NFT Management</h2>
+                  <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
+                </div>
+                <div className="my_slide" id="slide4">
+                  <h2 className="slide_title">NFT Creation</h2>
+                  <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
+                </div>
+              </Carousel>
             </div>
-            <div className="slide" id="slide2">
-              <h2 className="slide_title">Community Analysis</h2>
-              <p className="slide_text">We take a closer look at your music, analyze your audience’s preferences, and find connection between your fan community and the native Web3 consumers</p>
-            </div>
-            <div className="slide" id="slide3">
-              <h2 className="slide_title">NFT Management</h2>
-              <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
-            </div>
-            <div className="slide" id="slide4">
-              <h2 className="slide_title">NFT Creation</h2>
-              <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
-            </div>
-          </Carousel>
-        </div>
-        <div className="section5">
-          <div className="section5_lineHeader" />
-          <h1 className="section5_title">
-            Subscribe to Pond
-          </h1>
-          <h2 className="section5_subtitle">Latesst inifo and conversation on Music, Art, and NFT</h2>
-          <div className="signUp">
-            <input classsName="emailAddress" />
-            <button className="signUp" type="button">sign up</button>
           </div>
-          <h1 className="or">or...</h1>
-          <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
-        </div>
-        <div className="section6">
-          <h1 className="section6_title">
-            Pond
-          </h1>
-          <div className="bottomNavigation">
-            <li className="navElem"><NavLink to="/">Home</NavLink></li>
-            <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
-            <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
-            <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
-            <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
+          <div className="section5">
+            <div className="section5_lineHeader" />
+            <h1 className="section5_title">
+              Subscribe to Pond
+            </h1>
+            <h2 className="section5_subtitle">Latest info and conversation on Music, Art, and NFT</h2>
+            <div className="signUp">
+              <input classsName="emailAddress" />
+              <button className="signUp" type="button">sign up</button>
+            </div>
+            <h1 className="or">or...</h1>
+            <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
+          </div>
+          <div className="section6">
+            <h1 className="section6_title">
+              Pond
+            </h1>
+            <div className="bottomNavigation">
+              <li className="navElem"><NavLink to="/">Home</NavLink></li>
+              <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
+              <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+              <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+              <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
+            </div>
           </div>
         </div>
       </div>

@@ -242,7 +242,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-bottom: 10%;
   padding-top: 5%;
   padding-left: 10%;
-  padding-right: 10%;
 }
 
 .section3_subsection{
@@ -250,9 +249,29 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   padding-bottom: 5%;
   padding-top: 1%;
+  padding-left: 15%;
 }
 
+.vinylRecord{
+  display: flex;
+  width: 60%;
+  position: absolute;
+  left: -35%;
+}
 
+//------------------------------ upsidedown background image ------------------------------------
+.bottom_animation{
+  display: flex;
+  flex-direction: column;
+  background-image: url('../src/Images/background_upsidedown_grey.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-origin: center;
+  width: 100%;
+}
+
+// src/Images/background_pond_greyscale_upsidedown.png
 //------------------------------ section 4 ------------------------------------
 .section4{
   display: flex;
@@ -268,6 +287,28 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: 1px solid black;
 }
 
+.myCar{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.carousel-root{
+  padding-bottom: 10%;
+}
+.control-dots{
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.my_slide{
+  display: flex;
+  padding-bottom: 5%;
+  background-color: #5d5e62;
+  border-radius: 25px;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+}
 //------------------------------ section 5 ------------------------------------
 .section5{
   display: flex;
@@ -394,4 +435,35 @@ p {
   font-size: 15px;
   color: rgb(140, 140, 140);
   margin-top: 0%;
+}
+
+//------------------ section4 fonts
+.section4_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+  font-size: 40px;
+  text-align: center;
+}
+
+.slide_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0%;
+}
+
+.slide_text{
+  font-family: 'Kameron', serif;
+  font-weight:200;
+  font-size: 15px;
+  color: rgb(140, 140, 140);
+  margin-top: 0%;
+}
+
+//------------------ section4 fonts
+.section5_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+  font-size: 40px;
+  text-align: center;
 }
