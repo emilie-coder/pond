@@ -24,10 +24,10 @@ function App(props) {
   // this creates the store with the reducers
   return (
     <Router>
-      <div id="outer-container">
+      <div id="outer-container" className="outer-container">
         <Navigation />
       </div>
-      <Routes>
+      <Routes className="page-wrap">
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/FAQ" element={<FAQ />} />
@@ -36,22 +36,6 @@ function App(props) {
         <Route path="*" element={<FallBack />} />
       </Routes>
     </Router>
-  );
-}
-
-function Nav(props) {
-  return (
-    <nav className="navigation">
-      <Menu pageWrapId="page-wrap" outerContainerId="outer-container">
-        <ul className="navElements">
-          <li className="navElem"><NavLink to="/">Home</NavLink></li>
-          <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
-          <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
-          <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
-          <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
-        </ul>
-      </Menu>
-    </nav>
   );
 }
 

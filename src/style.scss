@@ -39,64 +39,72 @@ body, html {
 }
 
 //____________________________________________ Navigation ______________________________________________
-.navBar {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  width: 100%;
-  background-color: rgba(var(--white));
-  color: rgba(var(--black));
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
 }
 
-.navigation {
-  display: flex;
-  width: 100%;
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
 }
 
-.navigation .navElements{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
-  list-style: none;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
 }
 
-.navElem a{
-  text-decoration: none;
-  color: rgba(var(--black))
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
 }
 
-.navLogo{
-  display: flex;
-  width: 25%;
-  height: 10px;
-  background-image: url('./graphics/LOGO.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
 }
 
-.navBar h1{
-  display: flex;
-  font-size: small;
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
 }
 
-#outer-container{
-  display: flex;
-  justify-content: flex-end;
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
 }
 
-.bm-burger-button{
-  width:50px;
-  height: 50px;
-  display: flex;
-  align-self: flex-end;
-  justify-self: flex-end;
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
 }
 
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
 //===============================================================================================
 //____________________________________________ Home Page _________________________________________
 //===============================================================================================
@@ -108,31 +116,282 @@ body, html {
   background-color: var(--white);
 }
 
+
+//------------------------------ top navigation ----------------------------
+.topAnimation{
+  display: flex;
+  flex-direction: column;
+  background-image: url('../src/Images/background_pond_longer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-origin: center;
+  width: 100%;
+}
+
+//------------------------------ header ------------------------------------
+.header{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30%;
+  padding-bottom: 15%;
+}
 //------------------------------ section 1 ------------------------------------
 .section1{
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section1_line{
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.section1_content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+.section1_logo{
+  width: 80%;
 }
 
 //------------------------------ section 2 ------------------------------------
 .section2{
   display: flex;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
 }
 
-//____________________________________________ Font ______________________________________________
+.section2_line{
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.section2_title{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.section2_icons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+//---------------- section 2 notes
+
+.section2_icons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2_note{
+  display: flex;
+  flex-direction: column;
+  background-color: #16161a;
+  max-width: 35%;
+  margin: 10px;
+  padding: 4%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+//------------------------------ section 3 ------------------------------------
+.section3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section3_lineHeader{
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.section3_title{
+  padding-top: 5%;
+}
+
+.section3_subsections{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.section3_subsection{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5%;
+  padding-top: 1%;
+}
+
+
+//------------------------------ section 4 ------------------------------------
+.section4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section4_lineHeader{
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+//------------------------------ section 5 ------------------------------------
+.section5{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section5_lineHeader{
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+
+
+//____________________________________________ Fonts ______________________________________________
 h1{
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   font-size: 25px;
 }
 
 h2, h3, a {
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: 'Kameron', serif;
   font-weight: 200;
 }
 
 p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kameron', serif;
   font-weight: 200;
+}
+
+
+//------------------ header fonts
+.headerTitle{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 95px;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0%;
+}
+
+.headerSubTitle{
+  font-weight: 100;
+  font-size: 27px;
+  max-width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0%;
+  color: #5d5e62;
+}
+
+//------------------ section1 fonts
+.section1_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:800;
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0%;
+  padding-left: 5%;
+}
+
+//------------------ section2 fonts
+.section2_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+  font-size: 40px;
+  text-align: center;
+}
+
+.section2_note{
+  color: rgb(224, 224, 224);
+}
+
+//-------- note titles
+.note_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:700;
+  font-size: 20px;
+  text-align: left;
+  color: var(--white);
+}
+
+.note_subtitle{
+  font-family: 'Kameron', serif;
+  font-weight:400;
+  font-size: 20px;
+  text-align: left;
+  color: rgb(140, 140, 140);
+}
+
+.note_text{
+  font-family: 'Kameron', serif;
+  font-weight:200;
+  font-size: 15px;
+  color: rgb(140, 140, 140);
+}
+
+
+//------------------ section3 fonts
+.section3_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+  font-size: 40px;
+  text-align: center;
+}
+
+.section3_noteTitle{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 0%;
+}
+
+.section3_noteText{
+  font-family: 'Kameron', serif;
+  font-weight:200;
+  font-size: 15px;
+  color: rgb(140, 140, 140);
+  margin-top: 0%;
 }

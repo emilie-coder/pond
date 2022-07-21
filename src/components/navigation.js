@@ -5,9 +5,11 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
-import { slide as Menu } from 'react-burger-menu';
+import { elastic as Menu } from 'react-burger-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquarePlus, faGripLines } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSquarePlus, faGripLines, faLines, faBars,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   BrowserRouter as Router, Route, NavLink, Routes,
 } from 'react-router-dom';
@@ -38,9 +40,9 @@ class Navigation extends Component {
         isOpen={this.state.menuOpen}
         pageWrapId="page-wrap"
         outerContainerId="outer-container"
-        right
-        customBurgerIcon={<FontAwesomeIcon icon={faGripLines} />}
+        left
         onStateChange={(state) => this.handleStateChange(state)}
+        width="20%"
       >
         <li className="navElem" onClick={this.hide}><NavLink to="/">Home</NavLink></li>
         <li className="navElem" onClick={this.hide}><NavLink to="/manifesto">Manifesto</NavLink></li>
