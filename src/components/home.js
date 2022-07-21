@@ -163,8 +163,8 @@ class Home extends Component {
             </h1>
             <h2 className="section5_subtitle">Latest info and conversation on Music, Art, and NFT</h2>
             <div className="signUp">
-              <input classsName="emailAddress" />
-              <button className="signUp" type="button">sign up</button>
+              <input classsName="emailAddress" placeholder="Email Address" />
+              <button className="singUpButton" type="button">Sign Up</button>
             </div>
             <h1 className="or">or...</h1>
             <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>

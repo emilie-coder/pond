@@ -324,6 +324,60 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: 1px solid black;
 }
 
+.section5_subtitle{
+  display: flex;
+  padding-bottom: 5%;
+}
+
+.signUp{
+  display: flex;
+  width: 70%;
+  height: 55px;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-radius: 25px;
+  max-width: 650px;
+}
+
+.signUp input{
+  width: 80%;
+  height: 50%;
+  border-radius:10px;
+  box-shadow: none;
+  inset: none;
+  border: none;
+  justify-self: center;
+  align-self: center;
+}
+
+.signUp button{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  border-radius: 30px;
+  box-shadow: none;
+  inset: none;
+  border: none;
+  vertical-align: bottom;
+  padding: 2%;
+}
+
+.detailedSignUp{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  border-radius: 30px;
+  box-shadow: none;
+  inset: none;
+  border: none;
+  vertical-align: bottom;
+  padding: 20px;
+}
 
 
 //____________________________________________ Fonts ______________________________________________
@@ -479,4 +533,28 @@ p {
   text-align: center;
   margin-top: 0%;
   color: #5d5e62;
+}
+.or{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  font-size: 30px;
+  text-align: center;
+}
+
+.signUp *{
+  font-weight: 100;
+  font-family: 'Kameron', serif;
+  font-size: 15px;
+  color: #5d5e62;
+}
+
+.singUpButton{
+  color: #0e0e0e;
+}
+
+.detailedSignUp{
+  font-weight: 300;
+  font-family: 'Kameron', serif;
+  font-size:18px;
+  color: #242424;
 }
