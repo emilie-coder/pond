@@ -44,9 +44,18 @@ body, html {
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
+  right: 36px;
   top: 36px;
 }
+
+//-------------------- burger animation
+
+// .bm-burger-button:hover {
+//   transform: scale(110%);
+// }
+// .bm-burger-button:active {
+//   transform: scale(85%);
+// }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
@@ -147,6 +156,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   padding-top: 30%;
   padding-bottom: 15%;
+}
+
+.titleAnimation {
+  display: flex;
+  flex-direction: row;
+}
+
+.headerTitle{
+  transition: 500ms;
+}
+
+.headerTitle:hover{
+  transform: translateY(-25px);
+}
+
+#titleBreak{
+  padding-left: 25px;
 }
 //------------------------------ section 1 ------------------------------------
 .section1{

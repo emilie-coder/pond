@@ -40,7 +40,7 @@ class Navigation extends Component {
         isOpen={this.state.menuOpen}
         pageWrapId="page-wrap"
         outerContainerId="outer-container"
-        left
+        right
         onStateChange={(state) => this.handleStateChange(state)}
         width="20%"
       >
