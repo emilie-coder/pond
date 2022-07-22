@@ -80,7 +80,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #ffffff;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -99,6 +99,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bm-item a{
+  text-decoration: none;
 }
 
 /* Styling of overlay */
@@ -288,27 +295,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .myCar{
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-}
-.carousel-root{
-  padding-bottom: 10%;
-}
-.control-dots{
-  padding-top: 5%;
-  padding-bottom: 2%;
+  background-color: #ffffff;
+  width: 80%;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  margin-bottom: 10%;
 }
 
-.my_slide{
-  display: flex;
-  padding-bottom: 5%;
-  background-color: #5d5e62;
-  border-radius: 25px;
-  justify-self: center;
-  align-self: center;
-  flex-direction: column;
+.carousel-status{
+  display: none;
 }
+
 //------------------------------ section 5 ------------------------------------
 .section5{
   display: flex;
@@ -379,7 +376,53 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 20px;
 }
 
+//------------------------------ section 6 ------------------------------------
+.section6{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15%;
+}
 
+.section6_lineHeader{
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.section6_title{
+  display: flex;
+  padding-top: 5%;
+}
+
+.bottomNavigation{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: space-between;
+  padding-bottom: 10%;
+}
+
+.bottomNavigationElements{
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bottomNavigationElements li{
+  list-style: none;
+}
+
+.bottomNavigationElements li a{
+  text-decoration: none;
+  color: #242424;
+}
+
+l
 //____________________________________________ Fonts ______________________________________________
 h1{
   font-family: 'Montserrat', sans-serif;
@@ -515,7 +558,7 @@ p {
   margin-top: 0%;
 }
 
-//------------------ section4 fonts
+//------------------ section5 fonts
 .section5_title{
   font-family: 'Montserrat', sans-serif;
   font-weight:600;
@@ -557,4 +600,19 @@ p {
   font-family: 'Kameron', serif;
   font-size:18px;
   color: #242424;
+}
+
+//------------------ section6 fonts
+.section6_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:900;
+  font-size: 40px;
+  text-align: center;
+}
+
+.navElem a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:300;
+  font-size: 20px;
+  text-align: center;
 }

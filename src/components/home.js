@@ -170,15 +170,18 @@ class Home extends Component {
             <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
           </div>
           <div className="section6">
+            <div className="section6_lineHeader" />
             <h1 className="section6_title">
               Pond
             </h1>
             <div className="bottomNavigation">
-              <li className="navElem"><NavLink to="/">Home</NavLink></li>
-              <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
-              <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
-              <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
-              <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
+              <ul className="bottomNavigationElements">
+                <li className="navElem"><NavLink to="/">Home</NavLink></li>
+                <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
+                <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+                <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+                <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
+              </ul>
             </div>
           </div>
         </div>
