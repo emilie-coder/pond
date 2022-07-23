@@ -44,7 +44,7 @@ body, html {
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
+  right: 36px;
   top: 36px;
 }
 
@@ -166,6 +166,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 .section1_logo{
   width: 80%;
+}
+
+.wordWrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.titleAnimation{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headerTitle{
+  margin: 0;
+  padding: 0;
 }
 
 //------------------------------ section 2 ------------------------------------

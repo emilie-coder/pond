@@ -43,20 +43,24 @@ class Home extends Component {
         <div className="topAnimation">
           <div className="header">
             <div className="titleAnimation">
-              <h1 className="headerTitle">P</h1>
-              <h1 className="headerTitle">o</h1>
-              <h1 className="headerTitle">n</h1>
-              <h1 className="headerTitle">d</h1>
-              <h1 className="headerTitle" id="titleBreak">C</h1>
-              <h1 className="headerTitle">o</h1>
-              <h1 className="headerTitle">l</h1>
-              <h1 className="headerTitle">l</h1>
-              <h1 className="headerTitle">e</h1>
-              <h1 className="headerTitle">c</h1>
-              <h1 className="headerTitle">t</h1>
-              <h1 className="headerTitle">i</h1>
-              <h1 className="headerTitle">v</h1>
-              <h1 className="headerTitle">e</h1>
+              <div className="wordWrapper">
+                <h1 className="headerTitle">P</h1>
+                <h1 className="headerTitle">o</h1>
+                <h1 className="headerTitle">n</h1>
+                <h1 className="headerTitle">d</h1>
+              </div>
+              <div className="wordWrapper">
+                <h1 className="headerTitle" id="titleBreak">C</h1>
+                <h1 className="headerTitle">o</h1>
+                <h1 className="headerTitle">l</h1>
+                <h1 className="headerTitle">l</h1>
+                <h1 className="headerTitle">e</h1>
+                <h1 className="headerTitle">c</h1>
+                <h1 className="headerTitle">t</h1>
+                <h1 className="headerTitle">i</h1>
+                <h1 className="headerTitle">v</h1>
+                <h1 className="headerTitle">e</h1>
+              </div>
               {/* <h1 className="headerTitle"> Pond Collective </h1> */}
             </div>
             <h2 className="headerSubTitle"> Let your music thrive in endless Web3 Possibilites </h2>
