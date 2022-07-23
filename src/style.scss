@@ -44,18 +44,9 @@ body, html {
   position: fixed;
   width: 36px;
   height: 30px;
-  right: 36px;
+  left: 36px;
   top: 36px;
 }
-
-//-------------------- burger animation
-
-// .bm-burger-button:hover {
-//   transform: scale(110%);
-// }
-// .bm-burger-button:active {
-//   transform: scale(85%);
-// }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
@@ -89,7 +80,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #ffffff;
+  background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -108,13 +99,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.bm-item a{
-  text-decoration: none;
 }
 
 /* Styling of overlay */
@@ -156,23 +140,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   padding-top: 30%;
   padding-bottom: 15%;
-}
-
-.titleAnimation {
-  display: flex;
-  flex-direction: row;
-}
-
-.headerTitle{
-  transition: 500ms;
-}
-
-.headerTitle:hover{
-  transform: translateY(-25px);
-}
-
-#titleBreak{
-  padding-left: 25px;
 }
 //------------------------------ section 1 ------------------------------------
 .section1{
@@ -448,7 +415,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #242424;
 }
 
-l
+
+
 //____________________________________________ Fonts ______________________________________________
 h1{
   font-family: 'Montserrat', sans-serif;
@@ -583,6 +551,51 @@ p {
   color: rgb(140, 140, 140);
   margin-top: 0%;
 }
+
+//------------------ section4 fonts
+.section5_title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  font-size: 40px;
+  text-align: center;
+}
+
+.section5_subtitle{
+  font-weight: 100;
+  font-family: 'Kameron', serif;
+  font-size: 20px;
+  max-width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0%;
+  color: #5d5e62;
+}
+.or{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  font-size: 30px;
+  text-align: center;
+}
+
+.signUp *{
+  font-weight: 100;
+  font-family: 'Kameron', serif;
+  font-size: 15px;
+  color: #5d5e62;
+}
+
+.singUpButton{
+  color: #0e0e0e;
+}
+
+.detailedSignUp{
+  font-weight: 300;
+  font-family: 'Kameron', serif;
+  font-size:18px;
+  color: #242424;
+}
+
 
 //------------------ section5 fonts
 .section5_title{

@@ -5,7 +5,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
-import { reveal as Menu } from 'react-burger-menu';
+import { elastic as Menu } from 'react-burger-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSquarePlus, faGripLines, faLines, faBars,
@@ -40,7 +40,7 @@ class Navigation extends Component {
         isOpen={this.state.menuOpen}
         pageWrapId="page-wrap"
         outerContainerId="outer-container"
-        right
+        left
         onStateChange={(state) => this.handleStateChange(state)}
         width="20%"
       >
