@@ -264,44 +264,70 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section2_note{
   display: flex;
   flex-direction: column;
-  background-color: #16161a;
   max-width: 35%;
   margin: 10px;
   padding: 4%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transform: translateY(60px);
   opacity: 0;
-  transition: 1s ease all;
+  transition: 0.5s ease all;
+  min-width: 35%;
 
   .note_text{
-    display: none;
+    display: flex;
     transition: 2s ease;
+    position: absolute;
+    opacity: 0;
   }
 }
+
+
+.section2_note .note_title, .note_subtitle, .note_text{
+  padding: 20px;
+}
+
 
 .section2_note.active{
   transform: translateY(0px);
   opacity: 100;
 }
 
+.section2_note{
+  padding: 0;
+}
+
+.note_background{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #242424;
+  z-index: -1;
+}
+
+
 .section2_note:hover{
 
-  // -webkit-filter: blur(5px);
-  // filter: blur(5px);
-  // background-color: #bfbfbfc1;
-  // filter: blur (20px);
+  .note_background{
+    -webkit-filter: blur(5px);
+    filter: blur(10px);
+    background-color: #ffffff4a;
+  }
 
   .note_text{
-    display: flex;
+    opacity: 100%;
+    color:rgb(0, 0, 0)
   }
 
   .note_title{
-    display: none;
+    opacity: 0;
   }
 
   .note_subtitle{
-    display: none;
+    opacity: 0;
   }
+
+  box-shadow: none;
 }
 
 
@@ -342,6 +368,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-top: 5%;
 }
 
+
+//  the notes displacement around the vinyl record
 #s3_1{
 
 }
@@ -512,6 +540,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transform: scale(0.95);
   background-color: green;
 }
+
+
 //------------------------------ section 6 ------------------------------------
 .section6{
   display: flex;
@@ -653,7 +683,7 @@ p {
   font-family: 'Kameron', serif;
   font-weight:200;
   font-size: 15px;
-  color: rgb(140, 140, 140);
+  color: rgb(0, 0, 0);
 }
 
 

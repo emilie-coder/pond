@@ -130,6 +130,7 @@ class Home extends Component {
             </h1>
             <div className="section2_icons">
               <div className="section2_note">
+                <div className="note_background" />
                 <h2 className="note_title">Customize Music Release</h2>
                 {/* <img className="note_image" alt="img" src={require('../Images/image1.jpg')} height={150} width={250} /> */}
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
@@ -139,6 +140,7 @@ class Home extends Component {
                 </p>
               </div>
               <div className="section2_note">
+                <div className="note_background" />
                 <h2 className="note_title">Audience Engagement</h2>
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
                 <p className="note_text">-New ways to market your music
@@ -147,6 +149,7 @@ class Home extends Component {
                 </p>
               </div>
               <div className="section2_note">
+                <div className="note_background" />
                 <h2 className="note_title">Revenue Generation</h2>
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
                 <p className="note_text">-The future of community engagementNFT collectibles, including arts, tokens, and badges are the
@@ -155,6 +158,7 @@ class Home extends Component {
                 </p>
               </div>
               <div className="section2_note">
+                <div className="note_background" />
                 <h2 className="note_title">Higher Royalty</h2>
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
                 <p className="note_text">-Your work, your royalties
