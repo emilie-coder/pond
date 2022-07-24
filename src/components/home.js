@@ -69,9 +69,26 @@ class Home extends Component {
     }
   };
 
+  revealNote = (event) => {
+    const reveals = document.querySelectorAll('.section2_note');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
   render() {
     window.addEventListener('scroll', this.reveal);
     window.addEventListener('scroll', this.revealRecord);
+    window.addEventListener('scroll', this.revealNote);
     return (
       <div className="homePage" id="page-wrap">
         <div className="topAnimation">
@@ -99,13 +116,13 @@ class Home extends Component {
             </div>
             <h2 className="headerSubTitle"> Let your music thrive in endless Web3 Possibilites </h2>
           </div>
-          <div className="section1">
+          {/* <div className="section1">
             <div className="section1_line" />
             <div className="section1_content">
               <img className="section1_logo" alt="img" src={require('../graphics/LOGO.svg')} />
               <h2 className="section1_title"> Pond </h2>
             </div>
-          </div>
+          </div> */}
           <div className="section2">
             <div className="section2_line" />
             <h1 className="section2_title">
