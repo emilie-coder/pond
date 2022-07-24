@@ -88,6 +88,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
+  width: 100%;
 }
 
 /* Wrapper for item list */
@@ -96,6 +97,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   align-items: flex-end;
   color: #b8b7ad;
+  margin-right: 10px;
 }
 
 /* Individual item */
@@ -106,7 +108,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-bottom: 10px;
   justify-content: flex-end;
   align-items: flex-end;
+  transition:  200ms;
+  right: -10px;
 }
+
+.bm-item:hover{
+  transform: scale(.9);
+}
+
+.bm-item:active{
+  transform: scale(1.1);
+}
+
 
 .bm-item a{
   text-decoration: none;
@@ -284,9 +297,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section3_subsection{
   display: flex;
   flex-direction: column;
-  padding-bottom: 5%;
-  padding-top: 1%;
-  padding-left: 15%;
+  position: relative;
+  transform: translateX(-5000px);
+  transition: 2s all ease;
+}
+
+.section3_subsection.active{
+  transform: translateX(100px);
 }
 
 .vinylRecord{
@@ -294,7 +311,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 60%;
   position: absolute;
   left: -35%;
+  z-index: 1000000000;
+  transition: 10s all ease;
+  transform: rotate(-180deg);
 }
+
+.vinylRecord.active{
+  transform: rotate(680deg);
+}
+
+.vinylRecord.active:active{
+  transform: rotate(180deg);
+}
+
 
 //------------------------------ upsidedown background image ------------------------------------
 .bottom_animation{

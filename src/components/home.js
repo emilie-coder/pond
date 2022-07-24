@@ -37,7 +37,41 @@ class Home extends Component {
     this.setState({ comment: event.target.value });
   };
 
+  reveal = (event) => {
+    const reveals = document.querySelectorAll('.section3_subsection');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
+  revealRecord = (event) => {
+    const reveals = document.querySelectorAll('.vinylRecord');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
   render() {
+    window.addEventListener('scroll', this.reveal);
+    window.addEventListener('scroll', this.revealRecord);
     return (
       <div className="homePage" id="page-wrap">
         <div className="topAnimation">
