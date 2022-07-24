@@ -172,19 +172,19 @@ class Home extends Component {
           </h1>
           <img className="vinylRecord" alt="img" src={require('../Images/brett-jordan-P_LEitbpCPg-unsplash.png')} />
           <div className="section3_subsections">
-            <div className="section3_subsection">
+            <div className="section3_subsection" id="s3_1">
               <h2 className="section3_noteTitle">How do I make an NFT?</h2>
               <p className="section3_noteText"> We guide you through the process of creating an NFT and even mobilize our own artists to help</p>
             </div>
-            <div className="section3_subsection">
+            <div className="section3_subsection" id="s3_2">
               <h2 className="section3_noteTitle">What type of NFT do I choose?</h2>
               <p className="section3_noteText"> We get to know you and your perspective buyers to find the perfect NFT platform, content, and style for you</p>
             </div>
-            <div className="section3_subsection">
+            <div className="section3_subsection" id="s3_3">
               <h2 className="section3_noteTitle"> Who wants to buy my NFTs?</h2>
               <p className="section3_noteText"> We establish who your prospective target buyers are by getting to know you and your community </p>
             </div>
-            <div className="section3_subsection">
+            <div className="section3_subsection" id="s3_4">
               <h2 className="section3_noteTitle">What NFT platform should I use?</h2>
               <p className="section3_noteText"> We help you choose the right NFT platform that is right for your community, art, music, and style</p>
             </div>

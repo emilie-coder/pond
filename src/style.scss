@@ -164,6 +164,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-top: 30%;
   padding-bottom: 15%;
 }
+
 //------------------------------ section 1 ------------------------------------
 .section1{
   display: flex;
@@ -327,16 +328,34 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   flex-direction: column;
   padding-bottom: 10%;
-  padding-top: 5%;
   padding-left: 10%;
 }
 
 .section3_subsection{
   display: flex;
+  width: 80%;
   flex-direction: column;
   position: relative;
   transform: translateX(-5000px);
   transition: 2s all ease;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+#s3_1{
+
+}
+
+#s3_2{
+  left: 50px;
+}
+
+#s3_3{
+  left: 50px;
+}
+
+#s3_4{
+
 }
 
 .section3_subsection.active{
@@ -345,7 +364,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .vinylRecord{
   display: flex;
-  width: 60%;
+  width: 65%;
   position: absolute;
   left: -35%;
   z-index: 1000000000;
@@ -456,7 +475,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: none;
   vertical-align: bottom;
   padding: 2%;
+  background-color: #8119ff;
+  transition: 200ms;
 }
+
+.signUp button:hover{
+  transform: scale(1.1);
+}
+
+.signUp button:active{
+  transform: scale(0.95);
+  background-color: green;
+}
+
 
 .detailedSignUp{
   display: flex;
@@ -470,8 +501,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: none;
   vertical-align: bottom;
   padding: 20px;
+  transition: 300ms;
 }
 
+.detailedSignUp:hover{
+  transform: scale(1.05);
+}
+
+.detailedSignUp:active{
+  transform: scale(0.95);
+  background-color: green;
+}
 //------------------------------ section 6 ------------------------------------
 .section6{
   display: flex;
@@ -511,6 +551,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .bottomNavigationElements li{
   list-style: none;
+  transition: 200ms;
+}
+
+.bottomNavigationElements li:hover{
+  transform: scale(1.2);
+}
+
+.bottomNavigationElements li:active{
+  transform: scale(0.8);
 }
 
 .bottomNavigationElements li a{
@@ -574,7 +623,7 @@ p {
 //------------------ section2 fonts
 .section2_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:400;
+  font-weight:600;
   font-size: 40px;
   text-align: center;
 }
@@ -611,7 +660,7 @@ p {
 //------------------ section3 fonts
 .section3_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:400;
+  font-weight:600;
   font-size: 40px;
   text-align: center;
 }
@@ -635,7 +684,7 @@ p {
 //------------------ section4 fonts
 .section4_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:400;
+  font-weight:600;
   font-size: 40px;
   text-align: center;
 }
@@ -703,7 +752,7 @@ p {
 //------------------ section5 fonts
 .section5_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:600;
+  font-weight:800;
   font-size: 40px;
   text-align: center;
 }
@@ -747,7 +796,7 @@ p {
 //------------------ section6 fonts
 .section6_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:900;
+  font-weight:1000;
   font-size: 40px;
   text-align: center;
 }
