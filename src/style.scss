@@ -438,6 +438,58 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: 1px solid black;
 }
 
+
+.car_buttons{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+// .slide_arrow{
+//   display: flex;
+//   position: relative;
+//   width: 5%;
+//   height: 5%;
+//   bottom: 40px;
+// }
+
+.slide_arrow_right{
+  display: inline-block;
+  position: relative;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 30px; height: 30px;
+  transform: rotate(-45deg);
+  top: -50px;
+  transition: 0.5s ease;
+}
+
+.slide_arrow_left{
+  display: inline-block;
+  position: relative;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 30px; height: 30px;
+  transform: rotate(-225deg);
+  top: -50px;
+  transition: 0.5s ease;
+}
+
+.slideArrow_wrapper{
+  transition: 200ms ease-in-out;
+}
+
+.slideArrow_wrapper:hover {
+  transform: scale(1.2);
+}
+
+.slideArrow_wrapper:active{
+  transform: scale(0.9)
+}
+
+
 .myCar{
   background-color: #ffffff;
   width: 80%;
@@ -743,6 +795,8 @@ p {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 0%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .slide_text{
@@ -751,6 +805,7 @@ p {
   font-size: 15px;
   color: rgb(140, 140, 140);
   margin-top: 0%;
+  padding-bottom: 8%;
 }
 
 //------------------ section4 fonts

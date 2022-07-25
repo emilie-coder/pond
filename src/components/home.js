@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable global-require */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unused-class-component-methods */
@@ -14,7 +15,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faSquarePlus, faUsersLine, faMagnifyingGlassChart, faListCheck, faPaintBrush,
+  faSquarePlus, faUsersLine, faMagnifyingGlassChart, faListCheck, faPaintBrush, faAnglesLeft, faChevronLeft, faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 class Home extends Component {
@@ -121,7 +122,7 @@ class Home extends Component {
     window.addEventListener('scroll', this.reveal);
     window.addEventListener('scroll', this.revealRecord);
     window.addEventListener('scroll', this.revealNote);
-    const buttonStyle = { fontSize: 20, padding: '5px 20px', margin: '5px 0px' };
+
     return (
       <div className="homePage" id="page-wrap">
         <div className="topAnimation">
@@ -233,48 +234,52 @@ class Home extends Component {
             <h1 className="section4_title">
               How we do it
             </h1>
-            <div className="myCar">
-              <button type="button" onClick={this.prev} style={buttonStyle}>
-                Prev
-              </button>
-              <Carousel
-                autoPlay={this.state.autoPlay}
-                selectedItem={this.state.currentSlide}
-                onChange={this.updateCurrentSlide}
-                showThumbs={false}
-                showArrows={false}
-                infiniteLoop
-                emulateTouch
-                interval="9000"
-                transitionTime="500"
-                swipeable
-                stopOnHover
-                ariaLabel="string"
-              >
-                <div className="my_slide" id="slide1">
-                  <h2 className="slide_title">Individualized Meetings</h2>
-                  <FontAwesomeIcon icon={faUsersLine} className="slide_icon" />
-                  <p className="slide_text">We will get to know you, listen to your stories, and communicate with you about your demand…</p>
-                </div>
-                <div className="my_slide" id="slide2">
-                  <h2 className="slide_title">Community Analysis</h2>
-                  <FontAwesomeIcon icon={faMagnifyingGlassChart} className="slide_icon" />
-                  <p className="slide_text">We take a closer look at your music, analyze your audience’s preferences, and find connection between your fan community and the native Web3 consumers</p>
-                </div>
-                <div className="my_slide" id="slide3">
-                  <h2 className="slide_title">NFT Management</h2>
-                  <FontAwesomeIcon icon={faListCheck} className="slide_icon" />
-                  <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
-                </div>
-                <div className="my_slide" id="slide4">
-                  <h2 className="slide_title">NFT Creation</h2>
-                  <FontAwesomeIcon icon={faPaintBrush} className="slide_icon" />
-                  <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
-                </div>
-              </Carousel>
-              <button type="button" onClick={this.next} style={buttonStyle}>
-                Next
-              </button>
+            <div className="car_buttons">
+              <div className="slideArrow_wrapper">
+                <div className="slide_arrow_left" onClick={this.prev} />
+              </div>
+              {/* <FontAwesomeIcon icon={faChevronLeft} className="slide_arrow" onClick={this.prev} /> */}
+              <div className="myCar">
+                <Carousel
+                  autoPlay={this.state.autoPlay}
+                  selectedItem={this.state.currentSlide}
+                  onChange={this.updateCurrentSlide}
+                  showThumbs={false}
+                  showArrows={false}
+                  infiniteLoop
+                  emulateTouch
+                  interval="9000"
+                  transitionTime="500"
+                  swipeable
+                  stopOnHover
+                  ariaLabel="string"
+                >
+                  <div className="my_slide" id="slide1">
+                    <h2 className="slide_title">Individualized Meetings</h2>
+                    <FontAwesomeIcon icon={faUsersLine} className="slide_icon" />
+                    <p className="slide_text">We will get to know you, listen to your stories, and communicate with you about your demand…</p>
+                  </div>
+                  <div className="my_slide" id="slide2">
+                    <h2 className="slide_title">Community Analysis</h2>
+                    <FontAwesomeIcon icon={faMagnifyingGlassChart} className="slide_icon" />
+                    <p className="slide_text">We take a closer look at your music, analyze your audience’s preferences, and find connection between your fan community and the native Web3 consumers</p>
+                  </div>
+                  <div className="my_slide" id="slide3">
+                    <h2 className="slide_title">NFT Management</h2>
+                    <FontAwesomeIcon icon={faListCheck} className="slide_icon" />
+                    <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
+                  </div>
+                  <div className="my_slide" id="slide4">
+                    <h2 className="slide_title">NFT Creation</h2>
+                    <FontAwesomeIcon icon={faPaintBrush} className="slide_icon" />
+                    <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
+                  </div>
+                </Carousel>
+              </div>
+              <div className="slideArrow_wrapper">
+                <div className="slide_arrow_right" onClick={this.next} />
+              </div>
+              {/* <FontAwesomeIcon icon={faChevronRight} className="slide_arrow" onClick={this.next} /> */}
             </div>
           </div>
           <div className="section5">
