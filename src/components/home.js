@@ -60,7 +60,6 @@ class Home extends Component {
 
   revealRecord = (event) => {
     const reveals = document.querySelectorAll('.vinylRecord');
-
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < reveals.length; i++) {
       const windowHeight = window.innerHeight;
@@ -76,7 +75,8 @@ class Home extends Component {
 
   revealNote = (event) => {
     const reveals = document.querySelectorAll('.section2_note');
-
+    const hidden1 = document.querySelectorAll('.titleAnimation');
+    const hidden2 = document.querySelectorAll('.headerSubTitle');
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < reveals.length; i++) {
       const windowHeight = window.innerHeight;
@@ -84,8 +84,15 @@ class Home extends Component {
       const elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add('active');
+        // eslint-disable-next-line no-plusplus
+        for (let j = 0; j < hidden1.length; j++) {
+          hidden1[j].classList.add('active');
+          hidden2[j].classList.add('active');
+        }
       } else {
         reveals[i].classList.remove('active');
+        hidden1[0].classList.remove('active');
+        hidden2[0].classList.remove('active');
       }
     }
   };

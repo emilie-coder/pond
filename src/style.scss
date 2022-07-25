@@ -155,6 +155,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 //------------------------------ header ------------------------------------
 .header{
   display: flex;
+  position: fixed;
   flex-direction: column;
   width: 100%;
   background-size: cover;
@@ -163,6 +164,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   padding-top: 30%;
   padding-bottom: 15%;
+  // background-image: url('../src/Images/background_pond_longer.png');
 }
 
 //------------------------------ section 1 ------------------------------------
@@ -200,6 +202,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .titleAnimation{
   display: flex;
   flex-wrap: wrap;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.titleAnimation.active{
+  opacity: 0;
+}
+
+.headerSubTitle{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.headerSubTitle.active{
+  opacity: 0;
 }
 
 .headerTitle{
@@ -227,10 +244,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section2{
   display: flex;
   width: 100%;
+  margin-top: 800px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 5%;
+  background-image: url('../src/Images/background_pond_longer.png');
+  background-size: 150%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 5;
 }
 
 .section2_line{
@@ -349,6 +373,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('../src/Images/background_pond_longer.png');
+  background-size: 100%;
+  background-position-y:bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 1000;
 }
 
 
@@ -458,6 +488,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-position: fixed;
   background-origin: center;
   width: 100%;
+  z-index: 10;
 }
 
 // src/Images/background_pond_greyscale_upsidedown.png
@@ -467,6 +498,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 
@@ -582,6 +614,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .section5_title{
   opacity: 0;
+  padding-top: 3%;
   transform: translateY(50px);
   transition: 1.0s ease-in-out;
 }
@@ -702,7 +735,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .section6_title{
   display: flex;
-  transition: 0.2s ease;
+  transition: 0.8s ease;
 }
 
 .section6_title:hover{
