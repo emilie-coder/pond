@@ -38,6 +38,9 @@ body, html {
   width: 100%;
 }
 
+.outer-container{
+  z-index: 100000000000000;
+}
 //____________________________________________ Navigation ______________________________________________
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -375,7 +378,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   background-image: url('../src/Images/background_pond_longer.png');
   background-size: 100%;
-  background-position-y:bottom;
+  background-position-y: center;
   background-repeat: no-repeat;
   width: 100%;
   z-index: 1000;
@@ -495,27 +498,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 //------------------------------ section 4 ------------------------------------
 .section4{
   display: flex;
-  position: fixed;
-  top: 100px;
-  opacity: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
-  z-index: 100;
-  transition: 0.5s ease-in-out;
-  transform: translateY(50px);
 }
 
-.section4.active{
-  opacity: 1;
-  transform: translateY(0px);
-}
 
 .section4_title{
   opacity: 0;
   transform: translateY(50px);
-  transition: .5s ease-in-out;
+  transition: 1.0s ease-in-out;
 }
 
 .section4_title.active{
@@ -614,23 +607,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 
-.s56{
-  background-image: url('../src/Images/background_pond_longer.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: fixed;
-  background-origin: center;
-}
-
 //------------------------------ section 5 ------------------------------------
 .section5{
   display: flex;
-  margin-top: 800px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 200;
-
 }
 
 .section5_title{

@@ -19,6 +19,8 @@ import {
   faSquarePlus, faUsersLine, faMagnifyingGlassChart, faListCheck, faPaintBrush, faAnglesLeft, faChevronLeft, faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
+import addEmail from '../services';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -41,6 +43,12 @@ class Home extends Component {
 
   onCommentChange = (event) => {
     this.setState({ comment: event.target.value });
+  };
+
+  onSubmit = (event) => {
+    // addEmail(['testing']);
+    console.log('test submitting');
+    this.setState({ email: '' });
   };
 
   reveal = (event) => {
@@ -388,8 +396,13 @@ class Home extends Component {
               </h1>
               <h2 className="section5_subtitle">Latest info and conversation on Music, Art, and NFT</h2>
               <div className="signUp">
-                <input classsName="emailAddress" placeholder="Email Address" />
-                <button className="singUpButton" type="button">Sign Up</button>
+                <input
+                  className="emailAddress"
+                  placeholder="Email Address"
+                  onChange={this.onEmailChange}
+                  value={this.state.email}
+                />
+                <button className="singUpButton" type="button" onClick={this.onSubmit}>Sign Up</button>
               </div>
               <h1 className="or">or...</h1>
               <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
