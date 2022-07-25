@@ -205,6 +205,7 @@ class Home extends Component {
             <div className="myCar">
               <Carousel
                 showThumbs={false}
+                showArrows
                 infiniteLoop
                 emulateTouch
                 autoPlay
