@@ -13,7 +13,9 @@ import {
 } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSquarePlus, faUsersLine, faMagnifyingGlassChart, faListCheck, faPaintBrush,
+} from '@fortawesome/free-solid-svg-icons';
 
 class Home extends Component {
   constructor(props) {
@@ -214,18 +216,22 @@ class Home extends Component {
               >
                 <div className="my_slide" id="slide1">
                   <h2 className="slide_title">Individualized Meetings</h2>
+                  <FontAwesomeIcon icon={faUsersLine} className="slide_icon" />
                   <p className="slide_text">We will get to know you, listen to your stories, and communicate with you about your demand…</p>
                 </div>
                 <div className="my_slide" id="slide2">
                   <h2 className="slide_title">Community Analysis</h2>
+                  <FontAwesomeIcon icon={faMagnifyingGlassChart} className="slide_icon" />
                   <p className="slide_text">We take a closer look at your music, analyze your audience’s preferences, and find connection between your fan community and the native Web3 consumers</p>
                 </div>
                 <div className="my_slide" id="slide3">
                   <h2 className="slide_title">NFT Management</h2>
+                  <FontAwesomeIcon icon={faListCheck} className="slide_icon" />
                   <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
                 </div>
                 <div className="my_slide" id="slide4">
                   <h2 className="slide_title">NFT Creation</h2>
+                  <FontAwesomeIcon icon={faPaintBrush} className="slide_icon" />
                   <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
                 </div>
               </Carousel>
