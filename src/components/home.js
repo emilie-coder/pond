@@ -90,6 +90,70 @@ class Home extends Component {
     }
   };
 
+  revealS2 = (event) => {
+    const reveals = document.querySelectorAll('.section2_title');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
+  revealS3 = (event) => {
+    const reveals = document.querySelectorAll('.section3_title');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
+  revealS4 = (event) => {
+    const reveals = document.querySelectorAll('.section4_title');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
+  revealS5 = (event) => {
+    const reveals = document.querySelectorAll('.section5_title');
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
   next = () => {
     this.setState((state) => ({
       currentSlide: state.currentSlide + 1,
@@ -122,6 +186,10 @@ class Home extends Component {
     window.addEventListener('scroll', this.reveal);
     window.addEventListener('scroll', this.revealRecord);
     window.addEventListener('scroll', this.revealNote);
+    window.addEventListener('scroll', this.revealS2);
+    window.addEventListener('scroll', this.revealS3);
+    window.addEventListener('scroll', this.revealS4);
+    window.addEventListener('scroll', this.revealS5);
 
     return (
       <div className="homePage" id="page-wrap">
@@ -305,9 +373,20 @@ class Home extends Component {
           </div>
           <div className="section6">
             <div className="section6_lineHeader" />
-            <h1 className="section6_title">
-              Pond
-            </h1>
+            <div className="section6_title_animation">
+              <h1 className="section6_title">
+                P
+              </h1>
+              <h1 className="section6_title">
+                o
+              </h1>
+              <h1 className="section6_title">
+                n
+              </h1>
+              <h1 className="section6_title">
+                d
+              </h1>
+            </div>
             <div className="bottomNavigation">
               <ul className="bottomNavigationElements">
                 <li className="navElem"><NavLink to="/">Home</NavLink></li>

@@ -253,6 +253,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 //---------------- section 2 notes
 
+.section2_title{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.0s ease-in-out;
+}
+
+.section2_title.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .section2_icons{
   display: flex;
   flex-direction: row;
@@ -340,6 +351,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
 }
 
+
+.section3_title{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.0s ease-in-out;
+}
+
+.section3_title.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+
 .section3_lineHeader{
   display: flex;
   width: 100%;
@@ -389,7 +414,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .section3_subsection.active{
   transform: translateX(100px);
-  transition: 0.2s ease;
+  transition: 2.2s ease;
 }
 
 
@@ -443,6 +468,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
   align-items: center;
 }
+
+
+.section4_title{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.0s ease-in-out;
+}
+
+.section4_title.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
 
 .section4_lineHeader{
   display: flex;
@@ -540,6 +579,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
   align-items: center;
 }
+
+.section5_title{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.0s ease-in-out;
+}
+
+.section5_title.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
 
 .section5_lineHeader{
   display: flex;
@@ -642,9 +694,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: 1px solid black;
 }
 
+.section6_title_animation{
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+}
+
 .section6_title{
   display: flex;
-  padding-top: 5%;
+  transition: 0.2s ease;
+}
+
+.section6_title:hover{
+  transform: translateY(-10px);
+}
+
+.section6_title:active{
+  transform: translateY(10px);
 }
 
 .bottomNavigation{
@@ -661,10 +727,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 90%;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .bottomNavigationElements li{
   list-style: none;
+  padding: 3%;
   transition: 200ms;
 }
 
@@ -679,6 +747,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bottomNavigationElements li a{
   text-decoration: none;
   color: #242424;
+  word-wrap: none;
 }
 
 
