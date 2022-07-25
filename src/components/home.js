@@ -24,6 +24,8 @@ class Home extends Component {
       name: '',
       email: '',
       comment: '',
+      currentSlide: 0,
+      autoPlay: true,
     };
   }
 
@@ -87,10 +89,39 @@ class Home extends Component {
     }
   };
 
+  next = () => {
+    this.setState((state) => ({
+      currentSlide: state.currentSlide + 1,
+    }));
+  };
+
+  prev = () => {
+    this.setState((state) => ({
+      currentSlide: state.currentSlide - 1,
+    }));
+  };
+
+  changeAutoPlay = () => {
+    this.setState((state) => ({
+      autoPlay: !state.autoPlay,
+    }));
+  };
+
+  updateCurrentSlide = (index) => {
+    const { currentSlide } = this.state;
+
+    if (currentSlide !== index) {
+      this.setState({
+        currentSlide: index,
+      });
+    }
+  };
+
   render() {
     window.addEventListener('scroll', this.reveal);
     window.addEventListener('scroll', this.revealRecord);
     window.addEventListener('scroll', this.revealNote);
+    const buttonStyle = { fontSize: 20, padding: '5px 20px', margin: '5px 0px' };
     return (
       <div className="homePage" id="page-wrap">
         <div className="topAnimation">
@@ -203,12 +234,17 @@ class Home extends Component {
               How we do it
             </h1>
             <div className="myCar">
+              <button type="button" onClick={this.prev} style={buttonStyle}>
+                Prev
+              </button>
               <Carousel
+                autoPlay={this.state.autoPlay}
+                selectedItem={this.state.currentSlide}
+                onChange={this.updateCurrentSlide}
                 showThumbs={false}
-                showArrows
+                showArrows={false}
                 infiniteLoop
                 emulateTouch
-                autoPlay
                 interval="9000"
                 transitionTime="500"
                 swipeable
@@ -236,6 +272,9 @@ class Home extends Component {
                   <p className="slide_text">After finalizing our plan with you, we start mobilizing our visual artists and NFT experts to execute the plan</p>
                 </div>
               </Carousel>
+              <button type="button" onClick={this.next} style={buttonStyle}>
+                Next
+              </button>
             </div>
           </div>
           <div className="section5">
