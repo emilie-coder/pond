@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable global-require */
 /* eslint-disable no-unused-vars */
@@ -18,6 +19,8 @@ import {
   faSquarePlus, faUsersLine, faMagnifyingGlassChart, faListCheck, faPaintBrush, faAnglesLeft, faChevronLeft, faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
+import axios from 'axios';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,15 @@ class Home extends Component {
       autoPlay: true,
     };
   }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios.post('https://sheet.best/api/sheets/21c48555-6ce1-4976-88dc-6d7281b6a7c3', { email: this.state.email })
+      .then((response) => {
+        console.log(response);
+      });
+  };
 
   onNameChange = (event) => {
     this.setState({ name: event.target.value });
@@ -42,8 +54,14 @@ class Home extends Component {
     this.setState({ comment: event.target.value });
   };
 
+  onSubmit = (event) => {
+    this.setState({ email: '' });
+  };
+
   reveal = (event) => {
     const reveals = document.querySelectorAll('.section3_subsection');
+    const turnOffs = document.querySelectorAll('.section4');
+    const turnOns = document.querySelectorAll('.header');
 
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < reveals.length; i++) {
@@ -52,8 +70,16 @@ class Home extends Component {
       const elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add('active');
+        for (let j = 0; j < turnOffs.length; j++) {
+          turnOffs[j].classList.add('active');
+          turnOns[j].classList.add('active');
+        }
       } else {
         reveals[i].classList.remove('active');
+        for (let j = 0; j < turnOffs.length; j++) {
+          turnOffs[j].classList.remove('active');
+          turnOns[j].classList.remove('active');
+        }
       }
     }
   };
@@ -147,6 +173,7 @@ class Home extends Component {
 
   revealS5 = (event) => {
     const reveals = document.querySelectorAll('.section5_title');
+    const turnOffs = document.querySelectorAll('.section4');
 
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < reveals.length; i++) {
@@ -155,6 +182,9 @@ class Home extends Component {
       const elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add('active');
+        for (let j = 0; j < turnOffs.length; j++) {
+          turnOffs[j].classList.remove('active');
+        }
       } else {
         reveals[i].classList.remove('active');
       }
@@ -365,43 +395,50 @@ class Home extends Component {
               {/* <FontAwesomeIcon icon={faChevronRight} className="slide_arrow" onClick={this.next} /> */}
             </div>
           </div>
-          <div className="section5">
-            <div className="section5_lineHeader" />
-            <h1 className="section5_title">
-              Subscribe to Pond
-            </h1>
-            <h2 className="section5_subtitle">Latest info and conversation on Music, Art, and NFT</h2>
-            <div className="signUp">
-              <input classsName="emailAddress" placeholder="Email Address" />
-              <button className="singUpButton" type="button">Sign Up</button>
+          <div className="s56">
+            <div className="section5">
+              <div className="section5_lineHeader" />
+              <h1 className="section5_title">
+                Subscribe to Pond
+              </h1>
+              <h2 className="section5_subtitle">Latest info and conversation on Music, Art, and NFT</h2>
+              <div className="signUp">
+                <input
+                  className="emailAddress"
+                  placeholder="Email Address"
+                  onChange={this.onEmailChange}
+                  value={this.state.email}
+                />
+                <button className="singUpButton" type="button" onClick={this.handleSubmit}>Sign Up</button>
+              </div>
+              <h1 className="or">or...</h1>
+              <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
             </div>
-            <h1 className="or">or...</h1>
-            <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
-          </div>
-          <div className="section6">
-            <div className="section6_lineHeader" />
-            <div className="section6_title_animation">
-              <h1 className="section6_title">
-                P
-              </h1>
-              <h1 className="section6_title">
-                o
-              </h1>
-              <h1 className="section6_title">
-                n
-              </h1>
-              <h1 className="section6_title">
-                d
-              </h1>
-            </div>
-            <div className="bottomNavigation">
-              <ul className="bottomNavigationElements">
-                <li className="navElem"><NavLink to="/">Home</NavLink></li>
-                <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
-                <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
-                <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
-                <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
-              </ul>
+            <div className="section6">
+              <div className="section6_lineHeader" />
+              <div className="section6_title_animation">
+                <h1 className="section6_title">
+                  P
+                </h1>
+                <h1 className="section6_title">
+                  o
+                </h1>
+                <h1 className="section6_title">
+                  n
+                </h1>
+                <h1 className="section6_title">
+                  d
+                </h1>
+              </div>
+              <div className="bottomNavigation">
+                <ul className="bottomNavigationElements">
+                  <li className="navElem"><NavLink to="/">Home</NavLink></li>
+                  <li className="navElem"><NavLink to="/manifesto">Manifesto</NavLink></li>
+                  <li className="navElem"><NavLink to="/FAQ">FAQ</NavLink></li>
+                  <li className="navElem"><NavLink to="/aboutUs">About Us</NavLink></li>
+                  <li className="navElem"><NavLink to="/contactUs">Contact Us</NavLink></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
