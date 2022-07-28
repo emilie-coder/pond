@@ -19,7 +19,7 @@ import {
   faSquarePlus, faUsersLine, faMagnifyingGlassChart, faListCheck, faPaintBrush, faAnglesLeft, faChevronLeft, faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-import addEmail from '../services';
+import axios from 'axios';
 
 class Home extends Component {
   constructor(props) {
@@ -32,6 +32,17 @@ class Home extends Component {
       autoPlay: true,
     };
   }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios.post('https://sheet.best/api/sheets/21c48555-6ce1-4976-88dc-6d7281b6a7c3', { email: this.state.email })
+      .then((response) => {
+        console.log(response);
+      });
+
+    this.setState({ email: '' });
+  };
 
   onNameChange = (event) => {
     this.setState({ name: event.target.value });
@@ -47,7 +58,6 @@ class Home extends Component {
 
   onSubmit = (event) => {
     // addEmail(['testing']);
-    console.log('test submitting');
     this.setState({ email: '' });
   };
 
@@ -402,7 +412,7 @@ class Home extends Component {
                   onChange={this.onEmailChange}
                   value={this.state.email}
                 />
-                <button className="singUpButton" type="button" onClick={this.onSubmit}>Sign Up</button>
+                <button className="singUpButton" type="button" onClick={this.handleSubmit}>Sign Up</button>
               </div>
               <h1 className="or">or...</h1>
               <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
