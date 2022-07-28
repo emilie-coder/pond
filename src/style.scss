@@ -38,6 +38,9 @@ body, html {
   width: 100%;
 }
 
+.outer-container{
+  z-index: 100000000000000;
+}
 //____________________________________________ Navigation ______________________________________________
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -375,7 +378,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   // background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: 100%;
-  background-position-y:bottom;
+  background-position-y: center;
   background-repeat: no-repeat;
   width: 100%;
   z-index: 1000;

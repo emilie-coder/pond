@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 const postcssPresets = require('postcss-preset-env');
 
 const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { loader: 'style-loader' };
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   mode: env,
@@ -74,10 +75,19 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    new NodePolyfillPlugin(),
   ],
   devServer: {
     hot: true,
     historyApiFallback: true,
   },
-
+  resolve: {
+    fallback: {
+      fs: 'empty',
+      child_process: 'empty',
+      net: 'empty',
+      dns: 'empty',
+      tls: 'empty',
+    },
+  },
 };

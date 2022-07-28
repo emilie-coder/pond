@@ -57,6 +57,7 @@ class Home extends Component {
   };
 
   onSubmit = (event) => {
+    // addEmail(['testing']);
     this.setState({ email: '' });
   };
 
