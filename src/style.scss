@@ -144,7 +144,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .topAnimation{
   display: flex;
   flex-direction: column;
-  background-image: url('../src/Images/background_pond_longer.png');
+  background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: fixed;
@@ -164,7 +164,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   padding-top: 30%;
   padding-bottom: 15%;
-  // background-image: url('../src/Images/background_pond_longer.png');
 }
 
 //------------------------------ section 1 ------------------------------------
@@ -203,7 +202,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   flex-wrap: wrap;
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .titleAnimation.active{
@@ -212,7 +211,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .headerSubTitle{
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .headerSubTitle.active{
@@ -225,7 +224,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .headerTitle{
-  transition: 500ms;
+  transition: 300ms;
 }
 
 .headerTitle:hover{
@@ -249,7 +248,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
   align-items: center;
   padding-bottom: 5%;
-  background-image: url('../src/Images/background_pond_longer.png');
+  background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: 150%;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -258,6 +257,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .section2_line{
+  opacity: 0;
   display: flex;
   width: 100%;
   display: inline-block;
@@ -280,7 +280,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section2_title{
   opacity: 0;
   transform: translateY(50px);
-  transition: 1.0s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .section2_title.active{
@@ -305,12 +305,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transform: translateY(60px);
   opacity: 0;
-  transition: 0.5s ease all;
+  transition: 0.2s ease all;
   min-width: 35%;
 
   .note_text{
     display: flex;
-    transition: 2s ease;
+    transition: 0.5s ease;
     position: absolute;
     opacity: 0;
   }
@@ -338,7 +338,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 100%;
   background-color: #242424;
   z-index: -1;
-  transition: 1s ease;
+  transition: 0.3s ease;
 }
 
 
@@ -373,7 +373,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../src/Images/background_pond_longer.png');
+  // background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: 100%;
   background-position-y:bottom;
   background-repeat: no-repeat;
@@ -396,6 +396,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 .section3_lineHeader{
+  opacity: 0;
   display: flex;
   width: 100%;
   display: inline-block;
@@ -419,7 +420,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   position: relative;
   transform: translateX(-1000px);
-  transition: 3s ease-in;
+  transition: 1s ease-in;
   padding-bottom: 5%;
   padding-top: 5%;
 }
@@ -444,7 +445,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .section3_subsection.active{
   transform: translateX(100px);
-  transition: 2.2s ease;
+  transition: 1.0s ease;
 }
 
 
@@ -465,7 +466,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: absolute;
   left: -35%;
   z-index: 1000000000;
-  transition: 10s all ease;
+  transition: 8s all ease;
   transform: rotate(-180deg);
 }
 
@@ -482,7 +483,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bottom_animation{
   display: flex;
   flex-direction: column;
-  background-image: url('../src/Images/background_upsidedown_grey.png');
+  background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: fixed;
@@ -516,6 +517,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 .section4_lineHeader{
+  opacity: 0;
   display: flex;
   width: 100%;
   display: inline-block;
@@ -575,10 +577,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 .myCar{
-  background-color: #ffffff;
+  background-color: #000000;
   width: 80%;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  color: white;
+  border-radius: 10px;
   margin-bottom: 10%;
 }
 
@@ -627,6 +629,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 .section5_lineHeader{
+  opacity: 0;
   display: flex;
   width: 100%;
   display: inline-block;
@@ -721,6 +724,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .section6_lineHeader{
+  opacity: 0;
   display: flex;
   width: 100%;
   display: inline-block;
@@ -806,6 +810,7 @@ p {
 //------------------ header fonts
 .headerTitle{
   font-family: 'Montserrat', sans-serif;
+  color: white;
   font-weight: 800;
   font-size: 95px;
   text-align: center;
@@ -858,6 +863,7 @@ p {
 }
 
 .note_subtitle{
+  opacity: 0;
   font-family: 'Kameron', serif;
   font-weight:400;
   font-size: 20px;
