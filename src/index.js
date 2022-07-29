@@ -1,6 +1,7 @@
+/* eslint-disable global-require */
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.scss';
 import {
@@ -24,6 +25,12 @@ function App(props) {
   // this creates the store with the reducers
   return (
     <Router>
+      <div className="upperLeft">
+        <img className="upperLeft_logo" alt="img" src={require('./graphics/LOGO.svg')} />
+        {/* <h1 className="upperLeft_title">
+          Pond
+        </h1> */}
+      </div>
       <div id="outer-container" className="outer-container">
         <Navigation />
       </div>

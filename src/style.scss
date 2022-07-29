@@ -38,10 +38,39 @@ body, html {
   width: 100%;
 }
 
-.outer-container{
-  z-index: 100000000000000;
-}
 //____________________________________________ Navigation ______________________________________________
+
+.upperLeft{
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  padding-left: 30px;
+  z-index: 100000000;
+}
+
+.upperLeft_logo{
+  width: 40%;
+  transition: 0.2s ease;
+}
+
+.upperLeft_logo:hover{
+  transform: scale(1.2);
+}
+
+.upperLeft_logo:active{
+  transform: scale(0.9);
+}
+
+.upperLeft_title{
+  margin: 0;
+  padding: 0;
+  align-self: flex-end;
+  padding-left: 20px;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -53,12 +82,12 @@ body, html {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #000000;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #af01ca;
 }
 
 /* Position and sizing of clickable cross button */
@@ -143,11 +172,46 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 
+//_____________________________ circle page transition_____________________
+.transition{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty_circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 5px solid;
+  background-color: #3c00d5;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filled_circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 5px solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #3c00d5;
+}
+
+#middle_circle{
+  margin-top: 30px;
+}
+
+
 //------------------------------ top navigation ----------------------------
 .topAnimation{
   display: flex;
   flex-direction: column;
-  background-image: url('../src/Images/background_gifs/anim7.gif');
+  background-image: url('../src/Images/background_gifs/top_small.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: fixed;
@@ -165,7 +229,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  padding-top: 30%;
+  padding-top: 20%;
   padding-bottom: 15%;
 }
 
@@ -251,7 +315,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
   align-items: center;
   padding-bottom: 5%;
-  background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: 150%;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -276,6 +339,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 //---------------- section 2 notes
@@ -302,18 +367,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section2_note{
   display: flex;
   flex-direction: column;
-  max-width: 35%;
-  margin: 10px;
-  padding: 4%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  max-width: 45%;
   transform: translateY(60px);
   opacity: 0;
   transition: 0.2s ease all;
-  min-width: 35%;
+  min-width: 40%;
+  padding-bottom: 10%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
 
   .note_text{
     display: flex;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
     position: absolute;
     opacity: 0;
   }
@@ -330,8 +396,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   opacity: 100;
 }
 
-.section2_note{
-  padding: 0;
+.note_background_matte{
+  width: 100%;
+  height: 100%;
 }
 
 .note_background{
@@ -348,9 +415,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section2_note:hover, .section2_note:active{
 
   .note_background{
-    -webkit-filter: blur(5px);
-    filter: blur(10px);
-    background-color: #ffffff4a;
+    // -webkit-filter: blur(5px);
+    // filter: blur(10px);
+    background-color: #ffffff56;
   }
 
   .note_text{
@@ -376,9 +443,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-image: url('../src/Images/background_gifs/anim7.gif');
   background-size: 100%;
-  background-position-y: center;
+  background-position-y:bottom;
   background-repeat: no-repeat;
   width: 100%;
   z-index: 1000;
@@ -419,7 +485,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .section3_subsection{
   display: flex;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   position: relative;
   transform: translateX(-1000px);
@@ -435,11 +501,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 #s3_2{
-  left: 50px;
+  left: 10%;
 }
 
 #s3_3{
-  left: 50px;
+  left: 10%;
 }
 
 #s3_4{
@@ -470,7 +536,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   left: -35%;
   z-index: 1000000000;
   transition: 8s all ease;
-  transform: rotate(-180deg);
+  transform: rotate(0deg);
 }
 
 .vinylRecord.active{
@@ -478,7 +544,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .vinylRecord.active:active{
-  transform: rotate(180deg);
+  transform: rotate(1000deg);
 }
 
 
@@ -486,11 +552,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bottom_animation{
   display: flex;
   flex-direction: column;
-  background-image: url('../src/Images/background_gifs/anim7.gif');
+  background-image: url('../src/Images/background_gifs/bottom_small.gif');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: fixed;
-  background-origin: center;
+  background-position: bottom;
+  background-origin: top;
   width: 100%;
   z-index: 10;
 }
@@ -502,14 +568,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
 }
 
 
 .section4_title{
   opacity: 0;
   transform: translateY(50px);
-  transition: 1.0s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .section4_title.active{
@@ -691,6 +756,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: rgb(123, 123, 123);
 }
 
+.link{
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+}
 
 .detailedSignUp{
   display: flex;
@@ -706,6 +775,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 20px;
   transition: 300ms;
 }
+
 
 .detailedSignUp:hover{
   transform: scale(1.05);
@@ -742,7 +812,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .section6_title{
   display: flex;
-  transition: 0.8s ease;
+  transition: 0.3s ease;
 }
 
 .section6_title:hover{
@@ -764,16 +834,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .bottomNavigationElements{
   display: flex;
-  width: 90%;
+  width: 95%;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: #ffffff80;
 }
 
 .bottomNavigationElements li{
   list-style: none;
   padding: 3%;
   transition: 200ms;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .bottomNavigationElements li:hover{
@@ -800,12 +873,12 @@ h1{
 }
 
 h2, h3, a {
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 }
 
 p {
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 }
 
@@ -815,7 +888,7 @@ p {
   font-family: 'Montserrat', sans-serif;
   color: white;
   font-weight: 800;
-  font-size: 95px;
+  font-size: 105px;
   text-align: center;
   padding-bottom: 0;
   margin-bottom: 0%;
@@ -823,32 +896,21 @@ p {
 
 .headerSubTitle{
   font-weight: 100;
-  font-family: 'Kameron', serif;
-  font-size: 27px;
-  max-width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  max-width: 60%;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-top: 0%;
-  color: #5d5e62;
-}
-
-//------------------ section1 fonts
-.section1_title{
-  font-family: 'Montserrat', sans-serif;
-  font-weight:800;
-  font-size: 60px;
-  text-align: center;
-  padding-bottom: 0;
-  margin-bottom: 0%;
-  padding-left: 5%;
+  color: #000000;
 }
 
 //------------------ section2 fonts
 .section2_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:600;
-  font-size: 40px;
+  font-weight:800;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -860,14 +922,14 @@ p {
 .note_title{
   font-family: 'Montserrat', sans-serif;
   font-weight:700;
-  font-size: 20px;
+  font-size: 30px;
   text-align: left;
   color: var(--white);
 }
 
 .note_subtitle{
   opacity: 0;
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight:400;
   font-size: 20px;
   text-align: left;
@@ -875,9 +937,9 @@ p {
 }
 
 .note_text{
-  font-family: 'Kameron', serif;
-  font-weight:200;
-  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
   color: rgb(0, 0, 0);
 }
 
@@ -885,64 +947,65 @@ p {
 //------------------ section3 fonts
 .section3_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:600;
-  font-size: 40px;
+  font-weight:800;
+  font-size: 50px;
   text-align: center;
 }
 
 .section3_noteTitle{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   text-align: left;
   margin-bottom: 0%;
 }
 
 .section3_noteText{
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight:200;
-  font-size: 15px;
-  color: rgb(140, 140, 140);
+  font-size: 20px;
+  color: rgb(70, 70, 70);
   margin-top: 0%;
 }
 
 //------------------ section4 fonts
 .section4_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:600;
-  font-size: 40px;
+  font-weight:800;
+  font-size: 50px;
   text-align: center;
 }
 
 .slide_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 40px;
   margin-bottom: 0%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .slide_text{
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight:200;
-  font-size: 15px;
-  color: rgb(140, 140, 140);
+  font-size: 25px;
+  color: rgb(204, 204, 204);
   margin-top: 0%;
-  padding-bottom: 8%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 //------------------ section4 fonts
 .section5_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:600;
-  font-size: 40px;
+  font-weight:800;
+  font-size: 50px;
   text-align: center;
 }
 
 .section5_subtitle{
   font-weight: 100;
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   max-width: 50%;
   align-items: center;
@@ -958,9 +1021,13 @@ p {
   text-align: center;
 }
 
+.aMusician{
+  font-weight:600;
+}
+
 .signUp *{
   font-weight: 100;
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: #5d5e62;
 }
@@ -971,7 +1038,7 @@ p {
 
 .detailedSignUp{
   font-weight: 300;
-  font-family: 'Kameron', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size:18px;
   color: #242424;
 }
@@ -981,32 +1048,34 @@ p {
 .section5_title{
   font-family: 'Montserrat', sans-serif;
   font-weight:800;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 
 .section5_subtitle{
-  font-weight: 100;
-  font-family: 'Kameron', serif;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  max-width: 50%;
+  max-width: 60%;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-top: 0%;
-  color: #5d5e62;
+  color: #080808;
 }
+
+
 .or{
   font-family: 'Montserrat', sans-serif;
-  font-weight:600;
-  font-size: 30px;
+  font-weight:800;
+  font-size: 40px;
   text-align: center;
 }
 
 .signUp *{
-  font-weight: 100;
-  font-family: 'Kameron', serif;
-  font-size: 15px;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
   color: #5d5e62;
 }
 
@@ -1016,22 +1085,153 @@ p {
 
 .detailedSignUp{
   font-weight: 300;
-  font-family: 'Kameron', serif;
-  font-size:18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:20px;
   color: #242424;
 }
 
 //------------------ section6 fonts
 .section6_title{
   font-family: 'Montserrat', sans-serif;
-  font-weight:1000;
-  font-size: 40px;
+  font-weight:800;
+  font-size: 50px;
   text-align: center;
 }
 
 .navElem a{
   font-family: 'Montserrat', sans-serif;
-  font-weight:300;
+  font-weight:400;
   font-size: 20px;
   text-align: center;
+}
+
+
+//================================================================================================================================================================
+//================================================ MOBILE CSS SETTINGS ===========================================================================================
+//================================================================================================================================================================
+
+@media only screen and (max-width: 640px) {
+  .header{
+    padding-top: 30%;
+  }
+
+  .titleAnimation{
+    width: 90%;
+    padding-left: 10px;
+    justify-content: center;
+  }
+  .headerTitle{
+    font-size: 50px;
+  }
+  #titleBreak{
+    padding:0;
+  }
+  .headerSubTitle{
+    width: 80%;
+    max-width: 80%;
+    color:#bababa;
+    font-weight: 300;
+    text-align: right;
+    padding-top: 5%;
+    padding-right: 10%;
+  }
+  
+  .section2_title{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 40px;
+  }
+
+  .section2_icons{
+    flex-direction: column;
+    max-width: 90%;
+    width: 90%;
+  }
+
+  .section2_note{
+    max-width: 90%;
+    width: 90%;
+    padding-bottom: 100px;
+  }
+
+  .section3_title{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 40px;
+  }
+
+  .section3_subsections{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .section3_subsection{
+    width: 50%;
+  }
+
+  //  the notes displacement around the vinyl record
+  #s3_1{
+    left: -40px;
+  }
+
+  #s3_2{
+    left: 30px;
+  }
+
+  #s3_3{
+    left: 30px;
+  }
+
+  #s3_4{
+    left: -40px;
+  }
+
+
+  .section4_title{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 40px;
+  }
+
+  .car_buttons{
+    width: 80%;
+  }
+
+  .slide_title{
+    font-weight: 400;
+    font-size: 30px;
+  }
+  
+  .slide_text{
+    font-weight:200;
+    font-size: 20px;
+    padding-bottom: 10%;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .signUp *{
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #090909;
+  }
+
+  .detailedSignUp{
+    width: 80%;
+  }
+
+  .bottomNavigation{
+    width: 100%;
+  }
+  .bottomNavigationElements{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
