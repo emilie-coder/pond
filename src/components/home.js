@@ -38,7 +38,7 @@ class Home extends Component {
 
     axios.post('https://sheet.best/api/sheets/21c48555-6ce1-4976-88dc-6d7281b6a7c3', { email: this.state.email })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       });
 
     this.setState({ email: '' });
