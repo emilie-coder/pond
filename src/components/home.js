@@ -103,8 +103,24 @@ class Home extends Component {
 
   revealNote = (event) => {
     const reveals = document.querySelectorAll('.section2_note');
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  };
+
+  revealS2 = (event) => {
+    const reveals = document.querySelectorAll('.section2_title');
     const hidden1 = document.querySelectorAll('.titleAnimation');
     const hidden2 = document.querySelectorAll('.headerSubTitle');
+
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < reveals.length; i++) {
       const windowHeight = window.innerHeight;
@@ -121,22 +137,6 @@ class Home extends Component {
         reveals[i].classList.remove('active');
         hidden1[0].classList.remove('active');
         hidden2[0].classList.remove('active');
-      }
-    }
-  };
-
-  revealS2 = (event) => {
-    const reveals = document.querySelectorAll('.section2_title');
-
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < reveals.length; i++) {
-      const windowHeight = window.innerHeight;
-      const elementTop = reveals[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add('active');
-      } else {
-        reveals[i].classList.remove('active');
       }
     }
   };
@@ -271,7 +271,9 @@ class Home extends Component {
             </h1>
             <div className="section2_icons">
               <div className="section2_note">
-                <div className="note_background" />
+                <div className="note_background_matte">
+                  <div className="note_background" />
+                </div>
                 <h2 className="note_title">Customize Music Release</h2>
                 {/* <img className="note_image" alt="img" src={require('../Images/image1.jpg')} height={150} width={250} /> */}
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
@@ -281,7 +283,9 @@ class Home extends Component {
                 </p>
               </div>
               <div className="section2_note">
-                <div className="note_background" />
+                <div className="note_background_matte">
+                  <div className="note_background" />
+                </div>
                 <h2 className="note_title">Audience Engagement</h2>
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
                 <p className="note_text">-New ways to market your music
@@ -290,7 +294,9 @@ class Home extends Component {
                 </p>
               </div>
               <div className="section2_note">
-                <div className="note_background" />
+                <div className="note_background_matte">
+                  <div className="note_background" />
+                </div>
                 <h2 className="note_title">Revenue Generation</h2>
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
                 <p className="note_text">-The future of community engagementNFT collectibles, including arts, tokens, and badges are the
@@ -299,7 +305,9 @@ class Home extends Component {
                 </p>
               </div>
               <div className="section2_note">
-                <div className="note_background" />
+                <div className="note_background_matte">
+                  <div className="note_background" />
+                </div>
                 <h2 className="note_title">Higher Royalty</h2>
                 <h3 className="note_subtitle">We will get to know you, listen to your stories, ect</h3>
                 <p className="note_text">-Your work, your royalties
@@ -309,6 +317,11 @@ class Home extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="transition">
+          <div className="filled_circle" />
+          <div className="empty_circle" id="middle_circle" />
+          <div className="empty_circle" />
         </div>
         <div className="section3">
           <div className="section3_lineHeader" />
@@ -342,6 +355,11 @@ class Home extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="transition">
+          <div className="empty_circle" />
+          <div className="filled_circle" id="middle_circle" />
+          <div className="empty_circle" />
         </div>
         <div className="bottom_animation">
           <div className="section4">
@@ -398,6 +416,11 @@ class Home extends Component {
             </div>
           </div>
           <div className="s56">
+            <div className="transition">
+              <div className="empty_circle" />
+              <div className="empty_circle" id="middle_circle" />
+              <div className="filled_circle" />
+            </div>
             <div className="section5">
               <div className="section5_lineHeader" />
               <h1 className="section5_title">
@@ -414,7 +437,14 @@ class Home extends Component {
                 <button className="singUpButton" type="button" onClick={this.handleSubmit}>Sign Up</button>
               </div>
               <h1 className="or">or...</h1>
-              <button className="detailedSignUp" type="button">Are you a musician? We would like to get to know you more!</button>
+              <button className="detailedSignUp" type="button">
+                <a href="https://4ugpy48mo9j.typeform.com/to/TJTYozgB" className="link">
+                  Are you
+                  <span className="aMusician">
+                    &nbsp;a musician
+                  </span>? We would like to get to know you more!
+                </a>
+              </button>
             </div>
             <div className="section6">
               <div className="section6_lineHeader" />
