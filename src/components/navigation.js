@@ -42,7 +42,7 @@ class Navigation extends Component {
         outerContainerId="outer-container"
         right
         onStateChange={(state) => this.handleStateChange(state)}
-        width="20%"
+        width="200px"
       >
         <li className="navElem" onClick={this.hide}><NavLink to="/">Home</NavLink></li>
         <li className="navElem" onClick={this.hide}><NavLink to="/manifesto">Manifesto</NavLink></li>
