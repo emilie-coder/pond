@@ -782,6 +782,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   vertical-align: bottom;
   padding: 20px;
   transition: 300ms;
+  background-color: #ffffff;
 }
 
 
@@ -791,7 +792,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .detailedSignUp:active{
   transform: scale(0.95);
-  background-color: rgb(235, 235, 235);
+  background-color: #ffffff;
 }
 
 
@@ -1262,8 +1263,6 @@ p {
   }
 }
 
-
-
 //================================================================================================================================================================
 //================================================ Manifesto Page  ===========================================================================================
 //================================================================================================================================================================
@@ -1542,4 +1541,117 @@ p {
     line-height: 120%;
     font-size: 20pt;
   }
+}
+
+
+//================================================================================================================================================================
+//================================================ FAQ Page  ===========================================================================================
+//================================================================================================================================================================
+
+.faqPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.faqBackground, .contactBackground{
+  width: 100%;
+  height: 1080px;
+  position: fixed;
+  background-image: url('../src/Images/background_gifs/forward_1200px.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  z-index: -100000;
+}
+
+.faqPageWrapper{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  padding: 5%;
+  padding-top: 10%;
+}
+
+.faqTitle{
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30pt;
+  padding-bottom: 5%;
+}
+
+.faqs{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.faq{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  background: #fbfbfb;
+  padding: 10px;
+  margin: 20px;
+}
+
+.faq_question{
+  display: flex;
+  flex-direction: row;
+}
+
+.faq_answer{
+  display: flex;
+  flex-direction: row;
+}
+
+.q, .a{
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.q h2, .a h2{
+  font-weight: 600;
+}
+
+.faq_header{
+  font-weight: 500;
+}
+
+.faq_subhead{
+  color:rgba(107, 107, 107, 0.709);
+  font-size: 15pt;
+}
+
+.faq_question{
+  color: white;
+  background-color:rgb(32, 8, 73);
+}
+
+
+//================================================================================================================================================================
+//================================================ FAQ Page  ===========================================================================================
+//================================================================================================================================================================
+
+#contactArrow{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.contactUsTitle{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+.contactUsSub{
+  font-weight:200;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10%;
+  color: white;
 }

@@ -27,21 +27,18 @@ function App(props) {
     <Router>
       <div className="upperLeft">
         <img className="upperLeft_logo" alt="img" src={require('./graphics/LOGO.svg')} />
-        {/* <h1 className="upperLeft_title">
-          Pond
-        </h1> */}
       </div>
       <div id="outer-container" className="outer-container">
         <Navigation />
+        <Routes className="page-wrap">
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/manifesto" element={<Manifesto />} />
+          <Route path="/contactUs" element={<Contact />} />
+          <Route path="*" element={<FallBack />} />
+        </Routes>
       </div>
-      <Routes className="page-wrap">
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/FAQ" element={<FAQ />} />
-        <Route path="/manifesto" element={<Manifesto />} />
-        <Route path="/contactUs" element={<Contact />} />
-        <Route path="*" element={<FallBack />} />
-      </Routes>
     </Router>
   );
 }

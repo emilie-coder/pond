@@ -5,7 +5,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
-import { elastic as Menu } from 'react-burger-menu';
+import { slide as Menu } from 'react-burger-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSquarePlus, faGripLines, faLines, faBars,
@@ -25,12 +25,12 @@ class Navigation extends Component {
   // This keeps your state in sync with the opening/closing of the menu
   // via the default means, e.g. clicking the X, pressing the ESC key etc.
   handleStateChange(state) {
-    console.log('trying to open');
+    // console.log('trying to open');
     this.setState({ menuOpen: state.isOpen });
   }
 
   hide = () => {
-    console.log('trying to close');
+    // console.log('trying to close');
     this.setState({ menuOpen: false });
   };
 
