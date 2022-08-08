@@ -1655,3 +1655,88 @@ p {
   padding-bottom: 10%;
   color: white;
 }
+
+
+//================================================================================================================================================================
+//================================================ About Us Page  ===========================================================================================
+//================================================================================================================================================================
+
+
+.aboutUsPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.aboutUsBackground{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url('../src/Images/background_gifs/forward_1200px.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -10000;
+}
+
+.aboutUs_content{
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+}
+
+.ourStory{
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourStoryTitle{
+  text-align: center;
+  font-weight: 700;
+  font-size: 30pt;
+  padding-bottom: 5%;
+}
+
+.whoWeAre{
+  text-align: center;
+  font-weight: 700;
+  font-size: 30pt;
+  padding-top: 5%;
+}
+
+.ourStoryImage{
+  width: 80%;
+}
+
+.ourStorySubText{
+  padding-top: 5%;
+  width: 70%;
+}
+
+.individuals{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.personCard{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 40%;
+  min-width: 30%;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 5%;
+}
+
+.personName{
+  text-align: center;
+  font-weight: 200;
+  font-size: 30pt;
+}
