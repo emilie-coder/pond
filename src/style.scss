@@ -380,12 +380,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-bottom: 2%;
   margin-left: 1%;
   margin-right: 1%;
+  height: fit-content;
 
   .note_text{
     display: flex;
     transition: 0.3s ease;
     position: absolute;
     opacity: 0;
+    line-height: 20pt;
   }
 }
 
@@ -398,6 +400,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .section2_note.active{
   transform: translateY(0px);
   opacity: 100;
+  height: fit-content;
 }
 
 .note_background_matte{
@@ -653,9 +656,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 .myCar{
-  background-color: #000000;
+  background-color: #ffffff86;
   width: 80%;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 10px;
   margin-bottom: 10%;
 }
@@ -906,13 +909,13 @@ p {
 .headerSubTitle{
   font-weight: 100;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   max-width: 60%;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-top: 0%;
-  color: #000000;
+  color: #bbbbbb;
 }
 
 //------------------ section2 fonts
@@ -950,6 +953,7 @@ p {
   font-weight: 300;
   font-size: 20px;
   color: rgb(0, 0, 0);
+  line-height: 20pt;
 }
 
 #readMoreArrow{
@@ -1006,7 +1010,7 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight:200;
   font-size: 25px;
-  color: rgb(204, 204, 204);
+  color: rgb(47, 47, 47);
   margin-top: 0%;
   padding-left: 2%;
   padding-right: 2%;
@@ -1177,8 +1181,8 @@ p {
   .section2_note{
     max-width: 90%;
     width: 90%;
-    height:max-content;
-    // padding-bottom: 100px;
+    height: fit-content;
+    padding-bottom: 200px;
   }
 
   .section3_title{
@@ -1440,7 +1444,7 @@ p {
   top: 50px;
   width: 40%;
   height: 40%;
-  background-color: #6200e2;
+  background-color: #ba8af8;
   z-index: 10;
   border-radius: 50%;
   transition: 2.5s ease;
@@ -1592,7 +1596,7 @@ p {
   display: flex;
   width: 90%;
   flex-direction: column;
-  background: #fbfbfb;
+  background-color: #ffffff9e;
   padding: 10px;
   margin: 20px;
 }
@@ -1621,13 +1625,13 @@ p {
 }
 
 .faq_subhead{
-  color:rgba(107, 107, 107, 0.709);
+  color:rgba(42, 42, 42, 0.709);
   font-size: 15pt;
 }
 
 .faq_question{
   color: white;
-  background-color:rgb(32, 8, 73);
+  background-color:rgb(0, 0, 0);
 }
 
 
